@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>领取成功</title>
+    <link href="css/ad.css" rel="stylesheet">
+</head>
+<body>
+<span class="ready">保险领取完毕</span>
+<div class="succ">
+    <a href="" class="l">意外险保障条款</a>
+    <a href="" class="r">理赔流程</a>
+    <img src="images/close.png"  id="CloseApp" > 
+    <img src="images/25276645.jpg" class="bk">
+    <img src="images/63A87544446EAB925B8D375D42DDDFC3.png" class="logo">
+    <h1>杜蕾斯</h1>
+    <h3>成功为您购买50万意外保障</h3>
+    <a class="exit" href="javascript:;">无操作<span>30</span>秒后自动关闭</a>
+    <p>为了保障您的保险权益,请确保 IMEI: <span>123456789012345</span> 该设备在驾驶过程中处于开启状态</p>
+</div>
+<script src="js/lib/jquery-2.2.1.min.js"></script>
+<script src="js/lib/hammer.min.js"></script>
+<script src="js/lib/hammer-time.js"></script>
+<script>
+    $(function(){
+        countDown();
+        $(".exit").click(function(){
+            closeApp();
+        })
+    });
+    function countDown(){
+        var num=parseInt($(".exit span").html());
+        if(num>0){
+            var reduce=num-1;
+            $(".exit span").html(reduce);
+            setTimeout(function(){countDown();},1000);
+        }else{
+            closeApp();
+        }
+    }
+    function closeApp(){
+        //关闭app方法
+        android.finish();
+    }
+</script>
+</body>
+</html>

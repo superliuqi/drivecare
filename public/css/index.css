@@ -1,0 +1,105 @@
+@media screen and (max-width:480px) {
+    html {
+        font-size: 12px
+    }
+}
+@media screen and (min-width:480px) and (max-width:639px) {
+    html {
+        font-size: 15px
+    }
+}
+@media screen and (min-width:640px) and (max-width:719px) {
+    html {
+        font-size: 20px
+    }
+}
+@media screen and (min-width:720px) and (max-width:749px) {
+    html {
+        font-size: 22.5px
+    }
+}
+@media screen and (min-width:750px){
+    html {
+        font-size: 23.5px
+    }
+}
+
+.zl-ad{
+    position:fixed;
+    top:10%;
+    left:10%;
+    right:10%;
+    z-index: 1;
+}
+.zl-ad-contain {
+    position: relative;
+    max-width: 1024px;
+}
+.zl-ad-contain .warp{
+    width:100%;
+}
+.zl-ad-contain .free{
+    position:absolute;
+    width: 25%;
+    top: .5rem;
+    left: .5rem;
+    z-index: 1;
+}
+.zl-ad-contain .insure{
+    position:absolute;
+    width:48%;
+    top:21%;
+    left:16%;
+}
+.zl-ad-contain .info{
+    position: absolute;
+    top: 28%;
+    width: 100%;
+}
+.zl-ad-touch{
+    position:absolute;
+    bottom:10%;
+    width:60%;
+    height:3rem;
+    margin-left:20%;
+    border:1px solid #fff;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    border-radius: 2rem;
+}
+.touch{
+    height:100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position:absolute;
+    top:0;
+    left:0;
+    cursor:pointer;
+    z-index: 222;
+}
+.zl-ad-title{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    line-height: 3rem;
+    display:inline-block;
+    position: absolute;
+    left: 50%;
+    width: 11rem;
+    margin-left: -4rem;
+    text-align: center;
+}
+.success-get{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1111;
+    display: none;
+}
+.success-get>span{
+    position: absolute;
+    right: 0;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="_token" content="{!! csrf_token() !!}" />
+    <title></title>
+    <link href="css/frozen.css" rel="stylesheet">
+    <link href="css/ad.css" rel="stylesheet">
+</head>
+<body>
+
+<section class="ui-container">
+   <section class="zl-ad">
+       <div class="zl-ad-contain">
+           <img src="images/b201206132330300836.jpg" class="warp">
+           <img src="images/free.png" class="free">
+           <img src="images/insure.png" class="insure">
+           <img src="images/info.png" class="info">
+           <div class="zl-ad-touch"  id="clickWarp">
+               <!-- 修改部分-->
+               <div class="zl-ad-touch-warp">
+                   <span class="zl-ad-title">点击</span>
+                   <img src="images/circle.png" id="touch">
+                   <span class="zl-ad-title">领取</span>
+               </div>
+               <!-- 修改部分-->
+           </div>
+           <div class="success-get show">
+              <span class="advers">广告还有<span class="time"> 15 </span>秒</span>
+              <img src="images/close.png"  id="CloseApp" > 
+              <div class="clickLayer"></div>
+              <iframe src="http://www.taobao.com" style="width:100%;height:100%;">
+
+               </iframe>
+           </div>
+
+       </div>
+   </section>
+
+</section>
+
+<script src="js/lib/jquery-2.2.1.min.js"></script>
+<script src="js/lib/hammer.min.js"></script>
+<script src="js/lib/hammer-time.js"></script>
+<script src="js/driveCareAD.js"></script>
+</body>
+</html>

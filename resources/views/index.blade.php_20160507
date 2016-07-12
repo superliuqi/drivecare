@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="_token" content="{!! csrf_token() !!}" />
+    <title>领取意外险</title>
+    {!! HTML::style('css/frozen.css') !!}
+    {!! HTML::style('css/index.css') !!}
+    {!! HTML::style('css/ad.css') !!}
+</head>
+<body>
+<input type='hidden' name='tokenKey' value="{{ $tokenKey }}"></input>
+<input type='hidden' name='sponsorUrl' value="{{ $sponsorUrl }}"></input>
+<section class="ui-container">
+   <section class="zl-ad">
+       <div class="zl-ad-contain">
+
+           <img src="{{url()}}/images/b201206132330300836.jpg" class="warp">
+           <img src="{{url()}}/images/free.png" class="free">
+           <img src="{{url()}}/images/insure.png" class="insure">
+           <img src="{{url()}}/images/info.png" class="info">
+           <div class="zl-ad-touch">
+               <span class="zl-ad-title">右滑领取</span>
+               <img src="{{ $sponsorLogo }}" class="touch">
+           </div>
+       </div>
+   </section>
+       <div class="success-get">
+        <span style=""><span class="time"> 5 </span>秒后自动关闭 <a href="javascript:;" class="close-iframe">[X]</a></span>
+        <iframe src="" style="width:100%;height:100%;">
+
+        </iframe>
+    </div>
+</section>
+{!! HTML::script('js/lib/zeptojs/zepto.min.js') !!}
+{!! HTML::script('js/driveCareAD.js') !!}
+</body>
+</html>

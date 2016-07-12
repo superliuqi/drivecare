@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>领取成功</title>
+    {!! HTML::style('css/ad.css') !!}
+</head>
+<body>
+<input type='hidden' name='accountID' value="{{ $accountID }}"></input>
+<input type='hidden' name='accessToken' value="{{ $accessToken }}"></input>
+<div class="succ">
+
+    <div class="brand">
+        <a href="/clause" class="l">意外险保障条款</a>
+        <a href="/claims" class="r">理赔流程</a>
+        <img src="{{ $sponsorLogo }}" class="logo">
+        <div class="clear"></div>
+        <h1>{{ $sponsorName }}</h1>
+        <h3>成功为您购买50万意外保障</h3>
+        <p>为了保障您的保险权益,请确保 IMEI: <span>{{ $imei }}</span> 该设备在驾驶过程中处于开启状态</p>
+    </div>
+</div>
+{!! HTML::script('js/lib/jquery-2.2.1.min.js') !!}
+<script type="text/javascript">
+    android.receive('true');
+    // setTimeout(function (){android.getAccountID({"accountID": $('input[name="accountID"]').val()})},3000);
+    // setTimeout(function (){android.saveDate({"accountID": $('input[name="accountID"]').val()},{"accessToken":$('input[name="accessToken"]').val()})},3000);
+    setTimeout(function (){android.saveDate($('input[name="accountID"]').val(),$('input[name="accessToken"]').val())},3000);
+</script>
+</body>
+</html>
